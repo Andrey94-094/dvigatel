@@ -1,0 +1,71 @@
+.card {
+    &__container {
+        position: fixed;
+        top: 40%;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        padding: 10px;
+        width: 30%;
+        @media (max-width: 800px) {
+            width: 50%;
+        }
+        @media (max-width:$phone) {
+            width: 90%;
+        }
+    }
+    &__container::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #02406c 0%, #1f6da4 25%, #1f6da4 75%, #02406c 100%);
+        border-radius: 10px;
+    }
+    &__center {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+    }
+    &__title {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        position: relative;
+        color: black;
+        z-index: 11;
+    }
+    &__form {
+        position: relative;
+        width: 50%;
+        padding: 15px;
+        background-color: rgb(187, 187, 187);
+    }
+    &__form-control {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+        margin-bottom: 8px;
+        align-items: center;
+        height: 40px;
+        padding: 0 16px;
+        border: 1px solid #E0E0E0;
+    }
+    &__button {
+        padding: 0.5rem 1rem;
+        // color: #34495e;
+        color: white;
+        position: relative;
+        text-transform: uppercase;
+    }
+    &__clouse {
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        color: black;
+        position: relative;
+        padding: 10px;
+    }
+}
